@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Header</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" id="menuIcon">
+            <span>&#9776;</span>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> <!-- Replace with your actual logo image -->
+        </div>
+
+        <!-- Header Icons Section (Search and Wishlist) -->
+        <div class="header-icons">
+            <!-- Search Icon -->
+            <div class="icon search-icon" id="searchIcon">
+                <img src="search-icon.png" alt="Search"> <!-- Replace with your search icon image -->
+            </div>
+
+            <!-- Wishlist Icon -->
+            <div class="icon wishlist-icon" id="wishlistIcon">
+                <img src="wishlist-icon.png" alt="Wishlist"> <!-- Replace with your wishlist icon image -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Side Navigation (Hidden initially) -->
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Search Bar (Hidden initially) -->
+    <div class="search-bar" id="searchBar">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
