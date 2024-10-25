@@ -3,54 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Header</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Header Section</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .header-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .header-logo img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .nav-link {
+            color: #000 !important; /* Set navigation link color to black */
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .show-more {
+            cursor: pointer;
+            color: #007bff;
+        }
+        .navbar-toggler {
+            border-color: transparent; /* Remove border */
+        }
+        .navbar-toggler-icon {
+            display: none; /* Hide default icon */
+        }
+        .navbar-toggler .fas {
+            font-size: 1.5rem;
+            color: #000; /* Icon color */
+        }
+        /* Hide extra links on smaller screens */
+        @media (max-width: 768px) {
+            #extra-links {
+                display: none !important;
+            }
+            #show-more {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Modern Header Section -->
+    <header class="bg-light py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo and Title -->
+            <a href="#" class="header-logo">
+                <img src="https://via.placeholder.com/40" alt="Logo">
+                Your Store
+            </a>
 
-    <!-- Header Section -->
-    <header>
-        <!-- Hamburger Menu Icon -->
-        <div class="menu-icon" id="menuIcon">
-            <span>&#9776;</span>
+            <!-- Desktop Navigation Links -->
+            <nav class="d-none d-md-flex align-items-center">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-link" href="#"><i class="fas fa-store"></i> Shop</a>
+                <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <div id="extra-links" class="d-flex">
+                    <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+                    <a class="nav-link" href="#"><i class="fas fa-blog"></i> Blog</a>
+                    <a class="nav-link" href="#"><i class="fas fa-headset"></i> Support</a>
+                </div>
+                <span id="show-more" class="show-more nav-link">Show More</span>
+            </nav>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i> <!-- Font Awesome Menu Icon -->
+            </button>
         </div>
 
-        <!-- Logo Section -->
-        <div class="logo">
-            <img src="logo.png" alt="Logo"> <!-- Replace with your actual logo image -->
-        </div>
-
-        <!-- Header Icons Section (Search and Wishlist) -->
-        <div class="header-icons">
-            <!-- Search Icon -->
-            <div class="icon search-icon" id="searchIcon">
-                <img src="search-icon.png" alt="Search"> <!-- Replace with your search icon image -->
-            </div>
-
-            <!-- Wishlist Icon -->
-            <div class="icon wishlist-icon" id="wishlistIcon">
-                <img src="wishlist-icon.png" alt="Wishlist"> <!-- Replace with your wishlist icon image -->
+        <!-- Collapsible Mobile Menu -->
+        <div class="collapse d-md-none" id="mobileMenu">
+            <div class="container">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+                <a class="nav-link" href="#"><i class="fas fa-store"></i> Shop</a>
+                <a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact</a>
+                <a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About</a>
+                <a class="nav-link" href="#"><i class="fas fa-blog"></i> Blog</a>
+                <a class="nav-link" href="#"><i class="fas fa-headset"></i> Support</a>
             </div>
         </div>
     </header>
+    <!-- hero section start -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1200x600') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .btn-custom {
+            background-color: #28a745;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
 
-    <!-- Side Navigation (Hidden initially) -->
-    <div id="sideNav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
-        <a href="#home">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+    <section class="hero">
+        <div class="container">
+            <h1>Unlock Access to 3000+ Best-Selling Dropshipping Products!</h1>
+            <p>Start your business or scale up with our complete product bundle.</p>
+            <button class="btn btn-custom" onclick="alert('Thank you for your interest!')">Get Instant Access</button>
+        </div>
+    </section>
+    
+    <div class="text-center" style="padding: 50px 20px; background-color: #f8f9fa;">
+        <h2 style="font-size: 2.5em; color: #333; margin-bottom: 20px;">Featured Products</h2>
+        <p style="font-size: 1.2em; color: #666;">Discover our top-selling products below.</p>
     </div>
 
-    <!-- Search Bar (Hidden initially) -->
-    <div class="search-bar" id="searchBar">
-        <input type="text" placeholder="Search...">
-        <button>Search</button>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Toggle "Show More/Less" links on larger screens
+        const showMore = document.getElementById('show-more');
+        const extraLinks = document.getElementById('extra-links');
+        let expanded = false;
+
+        showMore.addEventListener('click', () => {
+            expanded = !expanded;
+            extraLinks.classList.toggle('d-none', !expanded);
+            showMore.textContent = expanded ? 'Show Less' : 'Show More';
+        });
+    </script>
+    
+
+    <!-- Product Card -->
+    <div class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1 w-80" class="bg-gray-100 flex items-center justify-center h-screen"">
+        <div class="bg-gray-100 p-4">
+            <img src="https://via.placeholder.com/300x150" alt="Product Image" class="w-full">
+        </div>
+        <div class="p-4">
+            <h2 class="text-lg font-semibold mb-1">TECNO POP 9 5G Aurora Cloud, 4GB+64GB</h2>
+            <p class="text-sm text-gray-600 mb-2">Segment's 1st 48MP Sony AI Camera</p>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">★★★★☆</span>
+                <span class="text-sm text-gray-600 ml-2">(78 reviews)</span>
+            </div>
+            <div class="flex items-center mb-2">
+                <span class="text-red-600 text-xl font-bold">₹9,499</span>
+                <span class="line-through text-gray-500 ml-2">₹11,999</span>
+                <span class="text-green-600 ml-2">(21% off)</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-4">Free delivery: <strong>Sun, 27 Oct</strong></p>
+            <!-- Buy Now Button with Link -->
+            <a href="https://www.amazon.in/s?k=mobiles+phones+under+10000&crid=2OR3RGJTWTS0C&sprefix=%2Caps%2C245&ref=nb_sb_ss_recent_2_0_recent" class="w-full">
+                <button class="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-300">Buy Now</button>
+            </a>
+        </div>
+    </div>
     </div>
 
-    <!-- JavaScript File -->
-    <script src="scripts.js"></script>
+    <!-- Tailwind CSS Script -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </body>
-</html>
+                        </html>
+                                                 
